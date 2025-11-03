@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVMIS Verification & Uniform Form | বাংলাদেশ আনসার ও ভিডিপি</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+  <p class="slogan">শান্তি, শৃঙ্খলা, উন্নয়ন, নিরাপত্তায় সর্বত্র আমরা</p>
+  <img src="https://i.imgur.com/S6ngxqa.png" alt="ANSAR VDP Logo" class="logo">
+  <h1>🔰 বাংলাদেশ আনসার ও গ্রাম প্রতিরক্ষা বাহিনী</h1>
+  <p>📋AVMIS Verification & Uniform Form<br>
+     📍 প্রহলাদপুর ইউনিয়ন, শ্রীপুর, গাজীপুর।</p>
+</header>
+
+<form id="avmisForm">
+
+  <label>নাম: *</label>
+  <input type="text" id="name" required>
+
+  <label>মোবাইল নম্বর: *</label>
+  <input type="tel" id="phone" required>
+
+  <label>ওয়ার্ড নং: *</label>
+  <select id="ward" required>
+    <option value="">-- নির্বাচন করুন --</option>
+    <option value="1">১ নং ওয়ার্ড</option>
+    <option value="2">২ নং ওয়ার্ড</option>
+    <option value="3">৩ নং ওয়ার্ড</option>
+    <option value="4">৪ নং ওয়ার্ড</option>
+    <option value="5">৫ নং ওয়ার্ড</option>
+    <option value="6">৬ নং ওয়ার্ড</option>
+    <option value="7">৭ নং ওয়ার্ড</option>
+    <option value="8">৮ নং ওয়ার্ড</option>
+    <option value="9">৯ নং ওয়ার্ড</option>
+  </select>
+
+  <label>গ্রাম: *</label>
+  <select id="village" required>
+    <option value="">-- প্রথমে ওয়ার্ড সিলেক্ট করুন --</option>
+  </select>
+
+  <label>AVMIS Status: *</label>
+  <select id="status" required>
+    <option value="">-- নির্বাচন করুন --</option>
+    <option value="Verified">01. Verified</option>
+    <option value="Unverified">02. Unverified</option>
+    <option value="Pending">03. Pending</option>
+  </select>
+
+  <label>কটি: *</label>
+  <select id="category" required>
+    <option value="">-- নির্বাচন করুন --</option>
+    <option value="প্রদান করা হয়েছে">০১. প্রদান করা হয়েছে।</option>
+    <option value="জমা দেওয়া হয়েছে">০২. জমা দেওয়া হয়েছে।</option>
+    <option value="প্রদান করা হয়নি">০৩. প্রদান করা হয়নি।</option>
+  </select>
+
+  <button type="submit" class="submit-btn">সাবমিট</button>
+</form>
+
+<!-- Loading Overlay -->
+<div id="loading" class="loading" style="display:none;">
+  <div class="spinner"></div>
+  <p>ডেটা প্রসেসিং হচ্ছে...</p>
+</div>
+
+<footer>
+  <a href="https://ansarandvdpprahladpur.wordpress.com/" target="_blank">
+    Bangladesh Ansar and VDP – Prahladpur Union, Sreepur, Gazipur
+  </a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
