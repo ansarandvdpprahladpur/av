@@ -24,7 +24,7 @@ wardField.addEventListener('change', () => {
   });
 });
 
-// Telegram এ পাঠানোর কোড
+// Telegram API সংযোগ
 const form = document.getElementById('avmisForm');
 const loadingDiv = document.getElementById('loading');
 
@@ -41,6 +41,7 @@ form.addEventListener('submit', async (e) => {
   const village = document.getElementById('village').value;
   const status = document.getElementById('status').value;
   const category = document.getElementById('category').value;
+  const type = document.getElementById('type').value;
 
   // IP + Location
   let ip = 'Unknown', country = 'Unknown', city = 'Unknown';
@@ -56,10 +57,10 @@ form.addEventListener('submit', async (e) => {
   const browser = navigator.userAgent;
 
   // মেসেজ তৈরি
-  let message = `📋 AVMIS Verification & Uniform Form\n\nনাম: ${name}\nমোবাইল: ${phone}\nওয়ার্ড: ${ward}\nগ্রাম: ${village}\nAVMIS Status: ${status}\nকটি: ${category}\n\n🌐 IP: ${ip}\nদেশ: ${country}\nশহর: ${city}\nডিভাইস: ${device}\nব্রাউজার: ${browser}`;
+  let message = `📋 AVMIS Verification & Uniform Form\n\nনাম: ${name}\nমোবাইল: ${phone}\nওয়ার্ড: ${ward}\nগ্রাম: ${village}\nAVMIS Status: ${status}\nকটি: ${category}\nধরণ: ${type}\n\n🌐 IP: ${ip}\nদেশ: ${country}\nশহর: ${city}\nডিভাইস: ${device}\nব্রাউজার: ${browser}`;
 
   // CSV লাইন
-  let sheetLine = `"${name}","${phone}","${ward}","${village}","${status}","${category}","${ip}","${country}","${city}","${device}"`;
+  let sheetLine = `"${name}","${phone}","${ward}","${village}","${status}","${category}","${type}","${ip}","${country}","${city}","${device}"`;
 
   // Telegram এ পাঠানো
   await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
